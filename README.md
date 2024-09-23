@@ -45,7 +45,8 @@ Realizamos diversos testes de hipóteses, para avaliar a significância estatist
 
 Um modelo de dados que agregue informações sobre a entrada da clínica e seu período de trial até a eventual conversão. Este deve ser um modelo que facilite a construção de dashboards para aquisição e a sua análise dos dados.
 
-* [Modelo de dados](imgs/erd_aquisicao_clinicas_star_schema.png)
+* Modelo de dados
+![alt text](<imgs/erd_aquisicao_clinicas_star_schema.png>)
 
 ## Dashboard
 
