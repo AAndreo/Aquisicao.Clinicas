@@ -1,4 +1,4 @@
-# Análise de dados de aquisição de clínicas de uma plataforma SaaS durante o periodo Trial.
+# Análise de dados de aquisição de clínicas.
 
 ## Contexto
 
