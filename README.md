@@ -23,29 +23,29 @@ A tabela subscriptions contém informações de **assinaturas** de clínicas. A 
 
 A tabela activity registra todas as **atividades** realizadas pela clínica, contendo registros temporais de quando a clínica desempenhou uma determinada ação. Temos diversos tipos de atividades no produto, que por sua vez estão organizadas em níveis hierarquicos para facilitar nosso trabalho com elas. Esses níveis estão disponíveis na tabela ( module , analytics_domain , feature ). As atividades também são divididas entre atividades válidas ou não, por uma questão de conveniência: algumas métricas são calculadas apenas considerando atividades “validas” e outras não. Esta extração contém apenas atividades realizadas em período de trial.
 
-* [Dicionário de dados](aquisicao_clinicas\dicionario_dados.md)
-* [EDA](aquisicao_clinicas\eda.ipynb)
+* [Dicionário de dados](aquisicao_clinicas/dicionario_dados.md)
+* [EDA](aquisicao_clinicas/eda.ipynb)
 
 ### O que precisa ser feito?
 O objetivo é trazer as principais métricas relacionadas à aquisição de clínicas, realizando uma análise de dados exploratória com essa base, de forma a identificar gargalos e oportunidades para otimizar a entrada de clinicas na Real.
 
 Você terá a sua disposição três datasets da Real que representam elementos de nossa base transacional de informações. Será necessário unir estes modelos da maneira correta para poder analisar o período de trial.
 
-* [Métricas](aquisicao_clinicas\metricas.ipynb)
-* [Métricas em SQL](sql\aquisicao_clinicas_metricas_scripts_sql_Metricas.pdf)
+* [Métricas](aquisicao_clinicas/metricas.ipynb)
+* [Métricas em SQL](sql/aquisicao_clinicas_metricas_scripts_sql_Metricas.pdf)
 
 ## Testes de hipóteses
 
 Realizamos diversos testes de hipóteses, para avaliar a significância estatistica de nossos insights iniciais.
 
-* [Testes de hipóteses](aquisicao_clinicas\hipoteses.ipynb)
-* [Conclusão](aquisicao_clinicas\conclusao.md)
+* [Testes de hipóteses](aquisicao_clinicas/hipoteses.ipynb)
+* [Conclusão](aquisicao_clinicas/conclusao.md)
 
 ## Modelagem de dados
 
 Um modelo de dados que agregue informações sobre a entrada da clínica e seu período de trial até a eventual conversão. Este deve ser um modelo que facilite a construção de dashboards para aquisição e a sua análise dos dados.
 
-* [Modelo de dados](imgs\erd_aquisicao_clinicas_star_schema.png)
+* [Modelo de dados](imgs/erd_aquisicao_clinicas_star_schema.png)
 
 ## Dashboard
 
@@ -55,4 +55,4 @@ Um Dashboard operacional para o time de Produto - Aquisição acompanhar este pr
 
 Uma breve apresentação de sua análise exploratória, incluindo informações relevantes sobre a operação, e oportunidades de otimização encontradas.
 
-* [Apresentação](imgs\Apresentacao.Case.Aquisicao.Clinicas.pdf)
+* [Apresentação](imgs/Apresentacao.Case.Aquisicao.Clinicas.pdf)
