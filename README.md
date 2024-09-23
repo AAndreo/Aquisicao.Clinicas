@@ -46,7 +46,14 @@ Realizamos diversos testes de hipóteses, para avaliar a significância estatist
 Um modelo de dados que agregue informações sobre a entrada da clínica e seu período de trial até a eventual conversão. Este deve ser um modelo que facilite a construção de dashboards para aquisição e a sua análise dos dados.
 
 * Modelo de dados
+
 ![alt text](<imgs/erd_aquisicao_clinicas_star_schema.png>)
+
+## ETL
+Nessa etapa criaremos toda a estrutura necessária para atender nosso modelo de dados Star Schema.
+Este deve ser um modelo que facilite a construção de dashboards para aquisição e a sua análise dos dados e será baseado em fator e dimensão.
+
+* [ETL](aquisicao_clinicas/etl.ipynb)
 
 ## Dashboard
 
