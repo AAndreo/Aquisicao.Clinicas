@@ -14,22 +14,45 @@ Desta forma, deve ser mencionada a existência do credenciamento. O processo de 
 
 ![alt text](<imgs/Screen Shot 2023-11-13 at 11.37.29.png>)
 
-## O que precisa ser feito?
-Seu objetivo é trazer as principais métricas relacionadas à aquisição de clínicas, realizando uma análise de dados exploratória com essa base, de forma a identificar gargalos e oportunidades para otimizar a entrada de clinicas na Real.
+## Análise Exploratória de Dados (EDA)
 
-Você terá a sua disposição três datasets da Real que representam elementos de nossa base transacional de informações. Será necessário unir estes modelos da maneira correta para poder analisar o período de trial.
-
+### Nossos dados
 Os arquivos incluem as clínicas que se cadastraram nos meses de **Agosto** e **Setembro** de **2023**, e suas interações até a data de extração (18/10/2023). A tabela clinics contém informações sobre as clínicas cadastradas e alguns marcos temporais delas, como trial e credenciamento. Aqui vale citar que a Real possui algumas parcerias com grandes redes e franquias de clínicas odontológicas pelo Brasil (diferenciadas das outras por colunas como `business_segmentation` e `is_chain_clinic`). Essas clínicas usam apenas o Financiamento Real, e desta forma devem ser removidas de análises sobre conversão de assinaturas
 
 A tabela subscriptions contém informações de **assinaturas** de clínicas. A assinatura é definida como o início de um esquema de pagamentos recorrentes, possuindo início, data de fim (caso tenha sido encerrada) e a recorrência de pagamentos. Se uma clínica começar uma assinatura, encerrar ela e depois voltar a ser assinante, ela terá múltiplas linhas de assinatura.
 
 A tabela activity registra todas as **atividades** realizadas pela clínica, contendo registros temporais de quando a clínica desempenhou uma determinada ação. Temos diversos tipos de atividades no produto, que por sua vez estão organizadas em níveis hierarquicos para facilitar nosso trabalho com elas. Esses níveis estão disponíveis na tabela ( module , analytics_domain , feature ). As atividades também são divididas entre atividades válidas ou não, por uma questão de conveniência: algumas métricas são calculadas apenas considerando atividades “validas” e outras não. Esta extração contém apenas atividades realizadas em período de trial.
 
-## Entregas
-Os entregáveis deste case são:
+* [Dicionário de dados](aquisicao_clinicas\dicionario_dados.md)
+* [EDA](aquisicao_clinicas\eda.ipynb)
+
+### O que precisa ser feito?
+O objetivo é trazer as principais métricas relacionadas à aquisição de clínicas, realizando uma análise de dados exploratória com essa base, de forma a identificar gargalos e oportunidades para otimizar a entrada de clinicas na Real.
+
+Você terá a sua disposição três datasets da Real que representam elementos de nossa base transacional de informações. Será necessário unir estes modelos da maneira correta para poder analisar o período de trial.
+
+* [Métricas](aquisicao_clinicas\metricas.ipynb)
+* [Métricas em SQL](sql\aquisicao_clinicas_metricas_scripts_sql_Metricas.pdf)
+
+## Testes de hipóteses
+
+Realizamos diversos testes de hipóteses, para avaliar a significância estatistica de nossos insights iniciais.
+
+* [Testes de hipóteses](aquisicao_clinicas\hipoteses.ipynb)
+* [Conclusão](aquisicao_clinicas\conclusao.md)
+
+## Modelagem de dados
 
 Um modelo de dados que agregue informações sobre a entrada da clínica e seu período de trial até a eventual conversão. Este deve ser um modelo que facilite a construção de dashboards para aquisição e a sua análise dos dados.
 
-Um Dashboard operacional para o time de Produto - Aquisição acompanhar este processo, com gráficos e números gerais a serem monitorados diariamente e semanalmente (aqui, a entrega pode ser uma imagem dos seus gráficos e como estão dispostos, mas usando nossos dados reais)
+* [Modelo de dados](imgs\erd_aquisicao_clinicas_star_schema.png)
+
+## Dashboard
+
+Um Dashboard operacional para o time de Produto - Aquisição acompanhar este processo, com gráficos e números gerais a serem monitorados diariamente e semanalmente.
+
+## Apresentação
 
 Uma breve apresentação de sua análise exploratória, incluindo informações relevantes sobre a operação, e oportunidades de otimização encontradas.
+
+* [Apresentação](imgs\Apresentacao.Case.Aquisicao.Clinicas.pdf)
