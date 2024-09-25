@@ -129,7 +129,7 @@ def plot_difmedia_2amostras(dataframe: pd.DataFrame, coluna1: str, coluna2: str,
 
 
 
-def plot_frequencia_cat(dataframe: pd.DataFrame, coluna: str, xlabel: str=np.nan, title: str=np.nan, orient: str='v') -> None:
+def plot_frequencia_cat(dataframe: pd.DataFrame, coluna: str, xlabel: str=np.nan, title: str=np.nan, orient: str='v', label_type: str='edge') -> None:
     """
     Plota um gráfico com as frequências e porcentagens das categorias de uma determinada coluna
     :param dataframe : pandas dataframe 
@@ -154,7 +154,7 @@ def plot_frequencia_cat(dataframe: pd.DataFrame, coluna: str, xlabel: str=np.nan
         plt.xticks(rotation=45, fontsize=8)
 
         for container in ax.containers:
-            ax.bar_label(container, labels = [f'{x.get_height():.2f}%' for x in container], label_type='center', fontsize=10)
+            ax.bar_label(container, labels = [f'{x.get_height():.2f}%' for x in container], label_type=label_type, fontsize=10)
 
     elif str.lower(orient) == 'h':
         ax = sns.barplot(data=data, x='porcentagem', y=coluna, orient=orient, palette=colormap)
@@ -162,7 +162,7 @@ def plot_frequencia_cat(dataframe: pd.DataFrame, coluna: str, xlabel: str=np.nan
         plt.xlabel('%')
 
         for container in ax.containers:
-            ax.bar_label(container, labels = [f'{x.get_width():.2f}%' for x in container], label_type='center', fontsize=10)
+            ax.bar_label(container, labels = [f'{x.get_width():.2f}%' for x in container], label_type=label_type, fontsize=10)
 
     plt.title(title)
     sns.despine()
