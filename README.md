@@ -59,6 +59,16 @@ Este deve ser um modelo que facilite a construção de dashboards para aquisiç�
 
 Um Dashboard operacional para o time de Produto - Aquisição acompanhar este processo, com gráficos e números gerais a serem monitorados diariamente e semanalmente.
 
+* Período Trial
+
+![alt text](<imgs/dashboard_periodo_trial.png>)
+
+* Conversão
+
+![alt text](<imgs/dashboard_conversao.png>)
+
+
+
 ## Apresentação
 
 Uma breve apresentação de sua análise exploratória, incluindo informações relevantes sobre a operação, e oportunidades de otimização encontradas.
