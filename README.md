@@ -1,5 +1,7 @@
 # Análise de dados de aquisição de clínicas.
 
+![alt text](imgs/image.png)
+
 ## Contexto
 
 A Real constrói uma plataforma de trabalho (SaaS - Software as a Service) focada especificamente em clínicas odontológicas, onde os dentistas e proprietários de clínica encontram todos os serviços necessários para gerir suas operações. Nosso software oferece uma agenda moderna, prontuário eletrônico e ficha de pacientes, além de acesso a gestão financeira e muito mais!
